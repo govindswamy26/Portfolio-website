@@ -754,3 +754,333 @@ footer {
   }
 }
 
+/* Base Styles - Rainbow Colors */
+:root {
+  --primary: #ff3366;  /* Vibrant pink */
+  --secondary: #ff8c42; /* Orange */
+  --accent: #ffd166;   /* Yellow */
+  --dark: #0d0221;     /* Deep purple-black */
+  --light: #f7f7f7;    /* Off-white */
+  --gray: #6d6a75;     /* Medium gray */
+}
+
+/* Navigation */
+.logo span {
+  color: var(--primary);
+  text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+}
+
+.link a:hover {
+  color: var(--secondary);
+}
+
+.link a::after {
+  background-color: var(--accent);
+}
+
+/* Home Section */
+.image {
+  box-shadow: 0 0 50px rgba(255, 140, 66, 0.5);
+}
+
+.content h1 span,
+.typewriter-text {
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+}
+
+.social-links a:hover {
+  color: var(--primary);
+}
+
+.btn button {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+}
+
+.btn button:hover {
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+/* About Section */
+.about-image {
+  box-shadow: 0 0 30px rgba(75, 201, 255, 0.5);
+}
+
+.detail-item p span {
+  color: #4bc9ff; /* Sky blue */
+}
+
+.download-btn {
+  background: linear-gradient(45deg, #4bc9ff, #9d4edd);
+}
+
+.download-btn:hover {
+  border: 2px solid #4bc9ff;
+  box-shadow: 0 0 20px #4bc9ff;
+}
+
+/* Skills Section */
+.skills-category {
+  background-color: rgba(157, 78, 221, 0.1); /* Purple */
+  border: 1px solid #9d4edd;
+}
+
+.skills-category h3 {
+  color: #9d4edd;
+}
+
+.skill-level {
+  background: linear-gradient(90deg, #9d4edd, #4bc9ff);
+}
+
+/* Projects Section */
+.project-card {
+  background-color: rgba(75, 201, 255, 0.1); /* Sky blue */
+  border: 1px solid #4bc9ff;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 30px rgba(75, 201, 255, 0.3);
+}
+
+.project-tech span {
+  background-color: rgba(255, 209, 102, 0.3); /* Yellow */
+  color: var(--accent);
+}
+
+.project-links a:hover {
+  color: #4bc9ff;
+}
+
+/* Certifications Section */
+.certification-card {
+  background-color: rgba(101, 221, 165, 0.1); /* Mint */
+  border: 1px solid #65dda5;
+}
+
+.certification-header {
+  background-color: rgba(101, 221, 165, 0.2);
+}
+
+.certification-header i {
+  color: #65dda5;
+}
+
+.view-cert {
+  color: #65dda5;
+}
+
+.view-cert:hover {
+  color: var(--accent);
+}
+
+/* Contact Section */
+.info-item i {
+  color: #ff3366;
+}
+
+.form-group input,
+.form-group textarea {
+  border: 1px solid #9d4edd;
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #ff3366, #9d4edd);
+}
+
+.submit-btn:hover {
+  border: 2px solid #ff3366;
+  box-shadow: 0 0 20px #ff3366;
+}
+
+/* Footer */
+.footer-logo span {
+  color: #65dda5;
+}
+
+.footer-social a:hover {
+  color: #ff8c42;
+}
+
+.footer-links a:hover {
+  color: #4bc9ff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(157, 78, 221, 0.3);
+}
+
+
+/* extra effects
+
+
+*/
+
+body {
+  background: linear-gradient(-45deg, #0d0221, #16003a, #2a0068, #4d007d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.project-card, .certification-card {
+  position: relative;
+}
+
+.project-card::before, .certification-card::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  background: linear-gradient(45deg, 
+    var(--primary), var(--accent), var(--secondary));
+  border-radius: inherit;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover::before, 
+.certification-card:hover::before {
+  opacity: 0.7;
+}
+
+.image, .about-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* .section-title span {
+  text-shadow: 
+    0 0 5px var(--primary),
+    0 0 10px var(--secondary),
+    0 0 15px var(--accent);
+} */
+
+.skill-level {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-level::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255,255,255,0.8), 
+    transparent);
+  transform: translateX(-100%);
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  100% { transform: translateX(100%); }
+}
+
+.nav-container .links a:hover {
+  background: linear-gradient(90deg, 
+    #ff3366, #ff8c42, #ffd166, #65dda5, #4bc9ff, #9d4edd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+}
+
+body {
+  cursor: url('data:image/svg+xml;utf8,<svg...'), auto;
+}
+
+/* Add this JavaScript to your HTML:
+document.addEventListener('mousemove', (e) => {
+  const trail = document.createElement('div');
+  trail.className = 'cursor-trail';
+  trail.style.left = `${e.pageX}px`;
+  trail.style.top = `${e.pageY}px`;
+  document.body.appendChild(trail);
+  setTimeout(() => trail.remove(), 1000);
+});
+*/
+
+section {
+  view-timeline-name: --section;
+  view-timeline-axis: block;
+  animation-timeline: --section;
+  animation-name: sectionReveal;
+  animation-range: entry 0% cover 50%;
+  animation-fill-mode: both;
+}
+
+@keyframes sectionReveal {
+  from { 
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn button {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn button::after {
+  content: '🎉';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.btn button:hover::after {
+  animation: confetti 1s ease-out;
+}
+
+@keyframes confetti {
+  0% { top: -20px; opacity: 1; }
+  100% { top: -100px; opacity: 0; }
+}
+
+
+.skill-item p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.skill-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Add to your <head> */
+
+
+body {
+  font-family: 'IBM Plex Mono', monospace; /* Techy vibe */
+}
+
+h1, h2, nav {
+  font-family: 'Rajdhani', sans-serif; /* Clean headings */
+}
+
+
