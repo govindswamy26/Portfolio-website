@@ -151,3 +151,17 @@ window.onload = function() {
     });
 };
 
+
+// Optional: Add animation or interactivity to timeline items if desired
+document.addEventListener("DOMContentLoaded", function() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            item.querySelector('.timeline-content').style.backgroundColor = '#f0f0f0';
+        });
+        item.addEventListener('mouseleave', function() {
+            item.querySelector('.timeline-content').style.backgroundColor = 'white';
+        });
+    });
+});
+

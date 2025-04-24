@@ -1084,3 +1084,51 @@ h1, h2, nav {
 }
 
 
+
+
+#timeline {
+  padding: 50px 0;
+  background-color: #f4f4f4;
+}
+
+.timeline-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.timeline-date {
+  width: 20%;
+  background-color: #ff5722;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.timeline-content {
+  width: 75%;
+  background-color: white;
+  padding: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  color: #666;
+}
